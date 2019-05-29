@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Pockemon App</string>
+    <string name="pockemon">Pockemon</string>
+    <string name="motivational_text">know more about pockemons</string>
+    <string name="todo">TODO</string>
+    <string name="abilities">Abilities</string>
+    <string name="moves">Moves</string>
+</resources>
