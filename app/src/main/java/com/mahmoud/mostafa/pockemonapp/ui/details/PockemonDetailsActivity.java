@@ -36,9 +36,10 @@ public class PockemonDetailsActivity extends AppCompatActivity implements Detail
 
     @Override
     public boolean onSupportNavigateUp() {
-        onBackPressed();
         new ActivityAnimator().disappearBottomRightAnimation(this);
+        onBackPressed();
         return super.onSupportNavigateUp();
+
     }
 
 

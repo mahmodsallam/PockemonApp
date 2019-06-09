@@ -17,7 +17,6 @@ public class SplashActivity extends AppCompatActivity implements SplashMvpView {
     SplashMvpPresenter mPresenter;
     ActivitySplashBinding binding;
     ObjectAnimator animation;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
