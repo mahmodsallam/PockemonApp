@@ -25,7 +25,10 @@ public class DetailsPresenter implements DetailsMvpPresenter {
                 subscribeOn(Schedulers.io()).subscribe(new Consumer<PockemonDetail>() {
             @Override
             public void accept(PockemonDetail details) throws Exception {
-                detailsView.setData(details);
+
+                detailsView.setImageUrl(details.getSprites().getBack_shiny());
+                detailsView.setPockemonInfo(getAllInfo(details));
+                detailsView.setPockemonMoves(getAllMoves(details));
 
             }
         }, new Consumer<Throwable>() {
@@ -36,5 +39,21 @@ public class DetailsPresenter implements DetailsMvpPresenter {
             }
         }));
 
+    }
+
+    private String getAllInfo(PockemonDetail detail) {
+        String info = "";
+        for (int i = 0; i < detail.getAbilities().size(); i++) {
+            info += (detail.getAbilities().get(i).getAbility().getName() + "\n");
+        }
+        return info;
+    }
+
+    private String getAllMoves(PockemonDetail detail) {
+        String moves = " ";
+        for (int i = 0; i < detail.getMoves().size(); i++) {
+            moves += (detail.getMoves().get(i).getMove().getName());
+        }
+        return moves;
     }
 }

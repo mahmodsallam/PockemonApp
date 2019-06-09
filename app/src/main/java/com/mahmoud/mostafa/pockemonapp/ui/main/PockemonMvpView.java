@@ -7,7 +7,4 @@ import java.util.List;
 public interface PockemonMvpView {
     void updateUi(List<Results> list);
 
-    void destroydisposal();
-
-
 }

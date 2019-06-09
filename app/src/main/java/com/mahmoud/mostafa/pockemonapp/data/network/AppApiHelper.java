@@ -12,22 +12,29 @@ import okhttp3.OkHttpClient;
 public class AppApiHelper implements ApiHelper {
     @Override
     public Observable<Pockemon> getPockemons() {
-        HttpLoggingInterceptor interceptor = new HttpLoggingInterceptor();
-        interceptor.setLevel(HttpLoggingInterceptor.Level.BODY);
+
         return Rx2AndroidNetworking.get(ApiEndPoints.POCKEMON_API_INSTANCE)
-                .setOkHttpClient(new OkHttpClient.Builder()
-                        .addInterceptor(interceptor)
-                        .build())
+                .setOkHttpClient(getHttpClient())
                 .build()
                 .getObjectObservable(Pockemon.class);
     }
 
     @Override
     public Observable<PockemonDetail> getPockemonDetails(String url) {
+        return Rx2AndroidNetworking.get(url).setOkHttpClient(getHttpClient())
+                .build()
+                .getObjectObservable(PockemonDetail.class);
+    }
+
+    private HttpLoggingInterceptor getLoggingInterceptor() {
         HttpLoggingInterceptor interceptor = new HttpLoggingInterceptor();
         interceptor.setLevel(HttpLoggingInterceptor.Level.BODY);
-        return Rx2AndroidNetworking.get(url).setOkHttpClient(new OkHttpClient.Builder()
-                .addInterceptor(interceptor)
-                .build()).build().getObjectObservable(PockemonDetail.class);
+        return interceptor;
     }
+
+    private OkHttpClient getHttpClient() {
+        return new OkHttpClient.Builder().addInterceptor(getLoggingInterceptor()).build();
+    }
+
+
 }

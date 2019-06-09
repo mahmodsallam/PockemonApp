@@ -37,4 +37,8 @@ public class PockemonPresenter implements PockemonMvpPresenter {
         }));
 
     }
+
+    public void destroydisposal(){
+        compositeDisposable.dispose();
+    }
 }

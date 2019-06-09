@@ -9,10 +9,11 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 
 import com.mahmoud.mostafa.pockemonapp.R;
+import com.mahmoud.mostafa.pockemonapp.base.BaseActivity;
 import com.mahmoud.mostafa.pockemonapp.databinding.ActivitySplashBinding;
 import com.mahmoud.mostafa.pockemonapp.ui.main.PockemonsActivity;
 
-public class SplashActivity extends AppCompatActivity implements SplashMvpView {
+public class SplashActivity extends BaseActivity implements SplashMvpView {
 
     SplashMvpPresenter mPresenter;
     ActivitySplashBinding binding;
