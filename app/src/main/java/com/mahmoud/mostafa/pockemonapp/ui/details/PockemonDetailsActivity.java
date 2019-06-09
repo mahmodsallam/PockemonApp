@@ -29,9 +29,12 @@ public class PockemonDetailsActivity extends BaseActivity implements DetailsMvpV
 
     @Override
     public boolean onSupportNavigateUp() {
+
         onBackPressed();
         disappearBottomRightAnimation(this);
+
         return super.onSupportNavigateUp();
+
     }
 
 
