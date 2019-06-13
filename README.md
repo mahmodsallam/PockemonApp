@@ -1,2 +1,2 @@
 # PockemonApp
-Pockemon
+Architecture components , MVP , RxJava
