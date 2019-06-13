@@ -5,4 +5,6 @@
     <string name="todo">TODO</string>
     <string name="abilities">Abilities</string>
     <string name="moves">Moves</string>
+    <string name="menu_item_local">load from local</string>
+    <string name="delete">delete</string>
 </resources>

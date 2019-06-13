@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout>
 
-
     <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
@@ -44,13 +43,13 @@
                     android:id="@+id/tv_pockemon_abilities"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginEnd="5dp"
+                    android:background="@color/colorPrimary"
                     android:text="@string/abilities"
                     android:textAlignment="center"
                     android:textColor="@color/colorWhite"
-                    android:background="@color/colorPrimary"
                     android:textSize="@dimen/save_margins"
-                    android:layout_marginStart="5dp"
-                    android:layout_marginEnd="5dp"
                     android:textStyle="bold" />
 
                 <TextView
@@ -70,6 +69,8 @@
             android:layout_height="wrap_content"
             android:layout_below="@id/first_row"
             android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:layout_above="@id/latest_row"
             android:orientation="vertical">
 
             <TextView
@@ -81,15 +82,58 @@
                 android:textColor="@color/colorWhite"
                 android:textSize="@dimen/save_margins"
                 android:textStyle="bold" />
-            <TextView
-                android:id="@+id/tv_pockemon_moves"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_marginTop="5dp"
 
-                android:textSize="@dimen/save_margins"
-                 />
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                >
+
+                <TextView
+                    android:id="@+id/tv_pockemon_moves"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="5dp"
+                    android:text="@string/app_name"
+                    android:textSize="@dimen/save_margins" />
+            </ScrollView>
+
         </LinearLayout>
 
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/latest_row"
+            android:layout_alignParentBottom="true"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/save_pockemon"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:background="@color/colorPrimary"
+                android:text="save"
+                android:textAllCaps="false"
+                android:textColor="@color/colorWhite"
+                android:textSize="15sp" />
+
+            <Button
+                android:id="@+id/delete_pockemon"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:background="@color/colorPrimary"
+                android:text="@string/delete"
+                android:textAllCaps="false"
+                android:textColor="@color/colorWhite"
+                android:textSize="15sp"></Button>
+        </LinearLayout>
     </RelativeLayout>
 </layout>
