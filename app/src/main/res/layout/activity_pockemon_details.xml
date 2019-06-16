@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout>
-    
+
     <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
@@ -80,14 +80,21 @@
                 android:textColor="@color/colorWhite"
                 android:textSize="@dimen/save_margins"
                 android:textStyle="bold" />
-            <TextView
-                android:id="@+id/tv_pockemon_moves"
+            <ScrollView
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:layout_height="wrap_content">
 
-                android:textSize="@dimen/save_margins"
-                 />
+                <TextView
+                    android:id="@+id/tv_pockemon_moves"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="5dp"
+
+                    android:textSize="@dimen/save_margins"
+                    />
+            </ScrollView>
+
         </LinearLayout>
 
     </RelativeLayout>
