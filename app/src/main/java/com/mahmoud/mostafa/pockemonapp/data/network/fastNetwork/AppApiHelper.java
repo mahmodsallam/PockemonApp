@@ -1,8 +1,5 @@
-package com.mahmoud.mostafa.pockemonapp.data.network;
+package com.mahmoud.mostafa.pockemonapp.data.network.fastNetwork;
 
-import android.arch.lifecycle.MutableLiveData;
-
-import com.androidnetworking.AndroidNetworking;
 import com.androidnetworking.interceptors.HttpLoggingInterceptor;
 import com.mahmoud.mostafa.pockemonapp.data.network.model.Pockemon;
 import com.mahmoud.mostafa.pockemonapp.data.network.model.PockemonDetail;
@@ -28,6 +25,8 @@ public class AppApiHelper implements ApiHelper {
                 .build()
                 .getObjectObservable(PockemonDetail.class);
     }
+
+
 
     private HttpLoggingInterceptor getLoggingInterceptor() {
         HttpLoggingInterceptor interceptor = new HttpLoggingInterceptor();

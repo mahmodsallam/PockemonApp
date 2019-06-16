@@ -1,4 +1,4 @@
-package com.mahmoud.mostafa.pockemonapp.ui.main;
+package com.mahmoud.mostafa.pockemonapp.ui.main.view;
 
 import android.app.Activity;
 import android.support.annotation.NonNull;
@@ -11,14 +11,15 @@ import android.widget.TextView;
 import com.mahmoud.mostafa.pockemonapp.R;
 import com.mahmoud.mostafa.pockemonapp.data.network.model.Results;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class PockemonAdapter extends RecyclerView.Adapter<PockemonAdapter.PockemonViewHolder> {
-    List<Results> pockemonList;
+    ArrayList<Results> pockemonList;
     Activity mContext;
     DetailsIntrerface detailsIntrerface;
 
-    public PockemonAdapter(List<Results> pockemonList, Activity mContext, DetailsIntrerface detailsIntrerface) {
+    public PockemonAdapter(ArrayList<Results> pockemonList, Activity mContext, DetailsIntrerface detailsIntrerface) {
         this.pockemonList = pockemonList;
         this.mContext = mContext;
         this.detailsIntrerface = detailsIntrerface;
