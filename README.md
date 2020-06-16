@@ -19,7 +19,8 @@ By building this app, you will demonstrate your understanding of new android con
 - Build a fully featured application that looks and feels natural on both Android operating systems.
 - Use modern android libraries to excute different tasks in effecient way.
 
- 
+## Use case
+<img src="mvp.png" width="150" margins="5px">  <img src="mvvm.png" width="150"> 
 
 ## Screenshots
 <img src="1.png" width="150" margins="5px">  <img src="2.png" width="150"> <img src="3.png" width="150">
