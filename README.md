@@ -1,4 +1,4 @@
-# movies
+# PockemonApp
 ## Project Overview
 
 Simple demo app that shows a list of pockemons and pockemons details from public API.
